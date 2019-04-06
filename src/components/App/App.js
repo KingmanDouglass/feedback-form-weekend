@@ -8,7 +8,9 @@ import Understanding from '../Understanding/Understanding.js';
 import Supported from '../Supported/Supported.js';
 import Comments from '../Comments/Comments.js';
 import Submit from '../Submit/Submit.js';
+import Final from '../Final/Final.js';
 import Footer from '../Footer/Footer';
+import ThankYou from '../ThankYou/ThankYou.js';
 
 class App extends Component {
   render() {
@@ -21,6 +23,8 @@ class App extends Component {
         <Route exact path="/supported" component={Supported} />
         <Route exact path="/comments" component={Comments} />
         <Route exact path="/submit" component={Submit} />
+        <Route exact path="/final" component={Final} />
+        <Route exact path="/thankyou" component={ThankYou} />
       </div>
     </Router>
     );
