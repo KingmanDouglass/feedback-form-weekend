@@ -5,11 +5,10 @@ import Footer from '../Footer/Footer'
 
 class Feelings extends Component {
 
-    state = [
+    state =
         {
             feelings: 0,
         }
-    ]
 
 
     nextPage = (event) => {

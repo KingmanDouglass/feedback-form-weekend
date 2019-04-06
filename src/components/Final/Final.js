@@ -13,9 +13,6 @@ class Footer extends Component {
 //onClick={this.nextPage}
 
 handleSubmit = () => {
-
-    let feedback = [];
-    
     let newFeedback = this.props.reduxState;
     let postFeedback =
     {
@@ -30,7 +27,7 @@ handleSubmit = () => {
     
     axios({
         method: 'POST',
-        url: '/feeback',
+        url: '/feedback',
         data: postFeedback,
     }).then((response)=>{
         console.log(`in post `, response);
@@ -50,7 +47,7 @@ handleSubmit = () => {
                   <li>Understanding: {this.props.reduxState.understandingReducer}</li>
                   <li>Supported: {this.props.reduxState.supportedReducer}</li>
                   <li>Comments: {this.props.reduxState.commentsReducer}</li>
-                  <button onClick={this.handleCheckout}>FUCK YEA</button>
+                  <button onClick={this.handleSubmit}>FUCK YEA</button>
               </ul>
             </div>
         )
