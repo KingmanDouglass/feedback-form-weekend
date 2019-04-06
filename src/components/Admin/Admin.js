@@ -23,7 +23,7 @@ getFeedback = () => {
     }
 
 deleteFeedback = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     let deleteId = event.target.value;
     console.log('delete id is ', deleteId);
     axios({
@@ -82,7 +82,9 @@ deleteFeedback = (event) => {
                                 {admin.comments}
                             </td>
                             <td>
-                                <button onClick={this.deleteFeedback} value={admin.id}>Delete</button>
+                            <button value={admin.id} onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) this.deleteFeedback(e) } }>
+                                Delete
+                            </button>
                             </td>
                         </tr>
                     )}
