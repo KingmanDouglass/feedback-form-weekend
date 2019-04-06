@@ -5,11 +5,10 @@ import Footer from '../Footer/Footer'
 
 class Understanding extends Component {
 
-    state = [
+    state =
         {
             understanding: 0,
         }
-    ]
 
 
     nextPage = (event) => {

@@ -5,11 +5,10 @@ import Footer from '../Footer/Footer'
 
 class Supported extends Component {
 
-    state = [
+    state =
         {
             supported: 0,
         }
-    ]
 
     nextPage = (event) => {
         console.log(this.props.product);

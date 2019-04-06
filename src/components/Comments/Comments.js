@@ -5,11 +5,10 @@ import Footer from '../Footer/Footer'
 
 class Comments extends Component {
 
-    state = [
+    state =
         {
             comments: 0,
         }
-    ]
 
     nextPage = (event) => {
         console.log(this.props.product);
