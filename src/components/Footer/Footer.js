@@ -6,7 +6,8 @@ class Footer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="App">
+            <header className="App-header">
               <h1>Review Your Feedback</h1>
               <ul>
                   <li>Feelings: {this.props.reduxState.feelingsReducer}</li>
@@ -15,6 +16,7 @@ class Footer extends Component {
                   <li>Comments: {this.props.reduxState.commentsReducer}</li>
                   <button disabled>Incomplete</button>
               </ul>
+            </header>
             </div>
         )
     }

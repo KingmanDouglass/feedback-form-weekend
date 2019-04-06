@@ -3,10 +3,17 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #3c3ac2;
   min-height: 70px;
   padding: 20px;
   color: white;
+}
+
+.Brad {
+  background-image: url(brad.png);
+  background-size: 900px;
+  width: 100%;
+  height: 100;
 }
 
 .App-title {

@@ -31,9 +31,10 @@ handleSubmit = () => {
         data: postFeedback,
     }).then((response)=>{
         console.log(`in post `, response);
-        this.props.history.push('/thankyou')
-        
-    })
+        this.props.history.push('/thankyou')  
+    }).catch((error) => {
+        alert(`Uh oh, someone didn't use words and/or numbers the correct way...this is why our failing education system in the country is a serious concern!`);
+      } )
 }
 
 

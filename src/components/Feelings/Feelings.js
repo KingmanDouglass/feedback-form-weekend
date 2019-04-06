@@ -31,9 +31,10 @@ class Feelings extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div>
+            <div className="Brad">
             <Header/>
-              <h1>How Are You Feeling Today?</h1>
+              <h1>How We Vibing?</h1>
+              <h5>Scale: 1 - 5</h5>
               <form className={classes.container} noValidate autoComplete="off">
               <TextField
                 id="filled-url"

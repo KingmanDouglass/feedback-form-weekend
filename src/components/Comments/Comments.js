@@ -28,26 +28,52 @@ class Comments extends Component {
     }
 
     render() {
+        const {classes} = this.props;
         return (
-            <div>
+            <div className="Brad">
             <Header/>
-              <h1>Any Comments You Want To Leave?</h1>
-              <input
+              <h1>Got Beef or Praise? Preach?</h1>
+              <h5>If It's Too Long I Won't Read</h5>
+              <form className={classes.container} noValidate autoComplete="off">
+              <TextField
+                id="filled-url"
+                label="Any Comments Fellas?"
+                className={classes.textField}
+                value={this.state.comments}
+                onChange={this.handleChange}
+                margin="normal"
+                variant="outlined"
+                />
+              <br/>
+              {/* <input
                 type="text"
                 placeholder="Comments"
                 value={this.state.comments}
                 onChange={this.handleChange}
-                />
-                <button onClick={this.nextPage}>Next</button>
+                /> */}
+                <Button onClick={this.nextPage} variant="outlined" className={classes.button}>
+                    Next
+                </Button>
+                </form>
             <Footer/>
             </div>
         )
     }
 }
 
+const styles = theme => ({
+    button: {
+      margin: theme.spacing.unit,
+    },
+    input: {
+      display: 'none',
+    },
+  });
+  
+
 const mapReduxStateToProps = (reduxState) => ({
     reduxState
   });
   
 
-export default connect(mapReduxStateToProps)(Comments);
+  export default connect(mapReduxStateToProps)(withStyles(styles)(Comments));

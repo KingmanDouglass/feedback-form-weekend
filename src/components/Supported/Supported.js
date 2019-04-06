@@ -28,27 +28,53 @@ class Supported extends Component {
     }
 
     render() {
+        const {classes} = this.props;
         return (
-            <div>
+            <div className="Brad">
             <Header/>
-              <h1>How Well Are You Being Supported?</h1>
-              <h3>Please Rate On A Scale of 1 (poor) to 5 (excellent)</h3>
-              <input
+              <h1>Peers Ensuring Your Chi Is Sound?</h1>
+              <h5>Scale: 1 - 5</h5>
+              <form className={classes.container} noValidate autoComplete="off">
+              <TextField
+                id="filled-url"
+                label="Diggin That Support Fellas?"
+                className={classes.textField}
+                value={this.state.supported}
+                onChange={this.handleChange}
+                margin="normal"
+                variant="outlined"
+            />
+              
+              <br/>
+              {/* <input
                 type="number"
                 placeholder="Support Gauge"
                 value={this.state.supported}
                 onChange={this.handleChange}
-                />
-                <button onClick={this.nextPage}>Next</button>
+                /> */}
+                <Button onClick={this.nextPage} variant="outlined" className={classes.button}>
+                    Next
+                </Button>
+                </form>
             <Footer/>
             </div>
         )
     }
 }
 
+const styles = theme => ({
+    button: {
+      margin: theme.spacing.unit,
+    },
+    input: {
+      display: 'none',
+    },
+  });
+  
+
 const mapReduxStateToProps = (reduxState) => ({
     reduxState
   });
   
 
-export default connect(mapReduxStateToProps)(Supported);
+  export default connect(mapReduxStateToProps)(withStyles(styles)(Supported));
