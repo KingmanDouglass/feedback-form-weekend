@@ -21,6 +21,23 @@ getFeedback = () => {
         alert('Sorry, could not get the feedback. Try again later.');
         })
     }
+
+deleteFeedback = (event) => {
+    event.preventDefault();
+    let deleteId = event.target.value;
+    console.log('delete id is ', deleteId);
+    axios({
+        method: 'DELETE',
+        url: `/feedback/${deleteId}`
+    })
+        .then((response) => {
+        this.getFeedback();
+        })
+        .catch((error) => {
+        console.log(`Something bad happened deleting feedback ${deleteId}`);
+        alert(`Couldn't delete the feedback, try again later`);
+        })
+    }
     
     componentDidMount() {
         console.log('in componentDidMount...')
@@ -51,7 +68,7 @@ getFeedback = () => {
                 </thead>
                 <tbody>
                     {this.props.reduxState.adminReducer.map(admin =>
-                        <tr>
+                        <tr key={admin.id}>
                             <td>
                                 {admin.feeling}
                             </td>
@@ -65,7 +82,7 @@ getFeedback = () => {
                                 {admin.comments}
                             </td>
                             <td>
-                                <button>Delete</button>
+                                <button onClick={this.deleteFeedback} value={admin.id}>Delete</button>
                             </td>
                         </tr>
                     )}
