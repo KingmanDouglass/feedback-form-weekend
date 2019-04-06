@@ -11,6 +11,7 @@ import Submit from '../Submit/Submit.js';
 import Final from '../Final/Final.js';
 import Footer from '../Footer/Footer';
 import ThankYou from '../ThankYou/ThankYou.js';
+import Admin from '../Admin/Admin.js';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
         <Route exact path="/submit" component={Submit} />
         <Route exact path="/final" component={Final} />
         <Route exact path="/thankyou" component={ThankYou} />
+        <Route exact path="/admin" component={Admin} />
       </div>
     </Router>
     );

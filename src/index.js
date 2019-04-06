@@ -34,6 +34,13 @@ const commentsReducer = (state = [], action) => {
     return state;
 }
 
+const adminReducer = (state = [], action) => {
+    if (action.type === 'DISPLAY_FEEDBACK') {
+        return action.payload
+    }
+    return state;
+}
+
 
 const storeInstance = createStore(
     combineReducers({
@@ -41,6 +48,7 @@ const storeInstance = createStore(
         understandingReducer,
         supportedReducer,
         commentsReducer,
+        adminReducer,
     }),
     applyMiddleware(logger),
 );
