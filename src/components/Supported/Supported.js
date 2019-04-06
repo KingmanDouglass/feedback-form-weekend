@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Supported extends Component {
 
     state =
         {
-            supported: 0,
+            supported: '',
         }
 
     nextPage = (event) => {
@@ -29,6 +32,7 @@ class Supported extends Component {
             <div>
             <Header/>
               <h1>How Well Are You Being Supported?</h1>
+              <h3>Please Rate On A Scale of 1 (poor) to 5 (excellent)</h3>
               <input
                 type="number"
                 placeholder="Support Gauge"

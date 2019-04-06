@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
 
     state =
         {
-            comments: 0,
+            comments: '',
         }
 
     nextPage = (event) => {

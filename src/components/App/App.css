@@ -20,3 +20,7 @@
 ul {
   list-style: none;
 }
+
+h1, ul {
+  font-family: "Times New Roman", Times, serif;
+}

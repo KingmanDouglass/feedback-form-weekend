@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
 
     state =
         {
-            understanding: 0,
+            understanding: '',
         }
 
 
@@ -30,9 +33,10 @@ class Understanding extends Component {
             <div>
             <Header/>
               <h1>How Are You Understanding The Content Today?</h1>
+              <h3>Please Rate On A Scale of 1 (poor) to 5 (excellent)</h3>
               <input
                 type="number"
-                placeholder="Undertsanding Level"
+                placeholder="Understanding"
                 value={this.state.understanding}
                 onChange={this.handleChange}
                 />

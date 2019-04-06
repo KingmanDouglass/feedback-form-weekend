@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 import Feelings from '../Feelings/Feelings.js';
@@ -9,7 +8,6 @@ import Supported from '../Supported/Supported.js';
 import Comments from '../Comments/Comments.js';
 import Submit from '../Submit/Submit.js';
 import Final from '../Final/Final.js';
-import Footer from '../Footer/Footer';
 import ThankYou from '../ThankYou/ThankYou.js';
 import Admin from '../Admin/Admin.js';
 
