@@ -4,7 +4,18 @@ import Header from '../Header/Header'
 
 class Footer extends Component {
 
+// state = 
+//     {
+//         "feeling": '',
+//         "understanding": '',
+//         "support": '',
+//         "comments": '',
+//     }
+
+
 nextPage = (event) => {
+    // const action = { type: 'CLEAR_INPUTS', payload: this.state};
+    // this.props.dispatch(action);
     this.props.history.push('/')
 }
 
