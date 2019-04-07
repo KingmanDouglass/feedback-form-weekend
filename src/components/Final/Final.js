@@ -48,7 +48,7 @@ handleSubmit = () => {
                   <li>Understanding: {this.props.reduxState.understandingReducer}</li>
                   <li>Supported: {this.props.reduxState.supportedReducer}</li>
                   <li>Comments: {this.props.reduxState.commentsReducer}</li>
-                  <button onClick={this.handleSubmit}>FUCK YEA</button>
+                  <button onClick={this.handleSubmit}>Submit Feedback</button>
               </ul>
             </div>
         )
