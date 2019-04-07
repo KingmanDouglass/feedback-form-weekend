@@ -30,7 +30,7 @@ class Comments extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <section>
+            <section className="background">
             <Header/>
             <div className="comments">
               <h1>Got Beef or Praise? Preach?</h1>

@@ -31,7 +31,7 @@ class Feelings extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <section >
+            <section className="background">
             <Header/>
             <div className="feelings">
               <h1>How We Vibing?</h1>

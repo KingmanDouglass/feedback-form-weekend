@@ -30,7 +30,7 @@ class Supported extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <section>
+            <section className="background">
             <Header/>
             <div className="support">
               <h1>Peers Ensuring Your Chi Is Sound?</h1>

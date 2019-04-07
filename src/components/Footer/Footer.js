@@ -7,7 +7,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="App">
-            <header className="App-header">
+            <header className="App-footer">
               <h1>Review Your Feedback</h1>
               <ul>
                   <li>Feelings: {this.props.reduxState.feelingsReducer}</li>

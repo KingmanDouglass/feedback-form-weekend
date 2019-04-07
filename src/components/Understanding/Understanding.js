@@ -31,7 +31,7 @@ class Understanding extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <section>
+            <section className="background">
             <Header/>
             <div className="understanding">
               <h1>Smelling What We Stepping In?</h1>

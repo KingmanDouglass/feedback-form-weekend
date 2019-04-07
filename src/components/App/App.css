@@ -3,40 +3,56 @@
 }
 
 .App-header {
-  background-color: #3c3ac2;
+  /* background-color: #3c3ac2; */
+  background-image: linear-gradient(#3c3ac2, black);
+  min-height: 50px;
+  padding: 10px;
+  color: white;
+}
+
+.App-footer {
+  /* background-color: #3c3ac2; */
+  background-image: linear-gradient( black, #3c3ac2);
   min-height: 70px;
   padding: 20px;
   color: white;
+}
+
+.background {
+  background-color:black ;
 }
 
 .home {
   background-image: url(bob5.png);
   height: 800px;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: red;
 }
 
 .feelings {
   background-image: url(bob1.png);
   background-size: 130% 100%;
-  height: 400px
+  height: 480px
 }
 
 .understanding {
   background-image: url(bob2.png);
   background-size: 130% 100%;
-  height: 400px
+  height: 480px
 }
 
 .support {
   background-image: url(bob3.png);
   background-size: 130% 100%;
-  height: 400px
+  height: 480px
 }
 
 .comments {
   background-image: url(bob4.png);
   background-size: 130% 100%;
-  height: 400px
+  height: 480px
 }
 
 .final {
