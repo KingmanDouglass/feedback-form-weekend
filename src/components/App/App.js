@@ -10,6 +10,7 @@ import Submit from '../Submit/Submit.js';
 import Final from '../Final/Final.js';
 import ThankYou from '../ThankYou/ThankYou.js';
 import Admin from '../Admin/Admin.js';
+import Home from '../Home/Home.js';
 
 class App extends Component {
   render() {
@@ -17,7 +18,8 @@ class App extends Component {
       
       <Router>
         <div>
-        <Route exact path="/" component={Feelings} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/feelings" component={Feelings} />
         <Route exact path="/understanding" component={Understanding} />
         <Route exact path="/supported" component={Supported} />
         <Route exact path="/comments" component={Comments} />

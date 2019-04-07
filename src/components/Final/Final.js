@@ -40,7 +40,7 @@ handleSubmit = () => {
 
     render() {
         return (
-            <div>
+            <div className="final">
             <Header/>
               <h1>Please Do A Final Review of Feedback</h1>
               <ul>

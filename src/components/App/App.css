@@ -9,11 +9,42 @@
   color: white;
 }
 
-.Brad {
-  background-image: url(brad.png);
-  background-size: 900px;
-  width: 100%;
-  height: 100;
+.home {
+  background-image: url(bob5.png);
+  height: 800px;
+  text-align: center;
+}
+
+.feelings {
+  background-image: url(bob1.png);
+  background-size: 130% 100%;
+  height: 400px
+}
+
+.understanding {
+  background-image: url(bob2.png);
+  background-size: 130% 100%;
+  height: 400px
+}
+
+.support {
+  background-image: url(bob3.png);
+  background-size: 130% 100%;
+  height: 400px
+}
+
+.comments {
+  background-image: url(bob4.png);
+  background-size: 130% 100%;
+  height: 400px
+}
+
+.final {
+  background-color: black;
+}
+
+.thankyou {
+  background-color: black;
 }
 
 .App-title {
@@ -28,6 +59,7 @@ ul {
   list-style: none;
 }
 
-h1, ul {
+h1, h5, ul {
   font-family: "Times New Roman", Times, serif;
+  color: white;
 }

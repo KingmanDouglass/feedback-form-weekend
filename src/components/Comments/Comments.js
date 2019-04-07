@@ -30,19 +30,21 @@ class Comments extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className="Brad">
+            <section>
             <Header/>
+            <div className="comments">
               <h1>Got Beef or Praise? Preach?</h1>
               <h5>If It's Too Long I Won't Read</h5>
               <form className={classes.container} noValidate autoComplete="off">
               <TextField
                 id="filled-url"
                 label="Any Comments Fellas?"
+                style={{backgroundColor: 'white', color: 'yellow'}}
                 className={classes.textField}
                 value={this.state.comments}
                 onChange={this.handleChange}
                 margin="normal"
-                variant="outlined"
+                variant="filled"
                 />
               <br/>
               {/* <input
@@ -51,24 +53,39 @@ class Comments extends Component {
                 value={this.state.comments}
                 onChange={this.handleChange}
                 /> */}
-                <Button onClick={this.nextPage} variant="outlined" className={classes.button}>
+                <Button onClick={this.nextPage} variant="contained" color="primary" className={classes.button}>
                     Next
                 </Button>
                 </form>
+                </div>
             <Footer/>
-            </div>
+            </section>
         )
     }
 }
 
 const styles = theme => ({
-    button: {
-      margin: theme.spacing.unit,
-    },
-    input: {
-      display: 'none',
-    },
-  });
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    backgroundColor: '#FFFFFF'
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    backgroundcolor: '#FFFFFF'
+  },
+  dense: {
+    marginTop: 16,
+  },
+  menu: {
+    width: 200,
+  },
+  multilineColor:{
+    backgroundcolor: '#FFFFFF'
+}
+});
   
 
 const mapReduxStateToProps = (reduxState) => ({

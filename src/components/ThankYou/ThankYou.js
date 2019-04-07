@@ -10,7 +10,7 @@ nextPage = (event) => {
 
     render() {
         return (
-            <div>
+            <div className="thankyou">
             <Header/>
               <h1>THANKS BRUH</h1>
               <button onClick={this.nextPage}>Spam Us With More Feedback</button>
