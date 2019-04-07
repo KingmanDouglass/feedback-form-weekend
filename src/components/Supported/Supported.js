@@ -38,7 +38,7 @@ class Supported extends Component {
               <form className={classes.container} noValidate autoComplete="off">
               <TextField
                 id="filled-url"
-                label="Diggin That Support Fellas?"
+                label="Got Support Fellas?"
                 style={{backgroundColor: 'white', color: 'yellow'}}
                 className={classes.textField}
                 value={this.state.supported}

@@ -13,20 +13,24 @@ import Admin from '../Admin/Admin.js';
 import Home from '../Home/Home.js';
 
 class App extends Component {
+  
+  
+  
   render() {
     return (
+  
       
       <Router>
         <div>
         <Route exact path="/" component={Home} />
-        <Route exact path="/feelings" component={Feelings} />
-        <Route exact path="/understanding" component={Understanding} />
-        <Route exact path="/supported" component={Supported} />
-        <Route exact path="/comments" component={Comments} />
-        <Route exact path="/submit" component={Submit} />
-        <Route exact path="/final" component={Final} />
-        <Route exact path="/thankyou" component={ThankYou} />
-        <Route exact path="/admin" component={Admin} />
+        <Route path="/feelings" component={Feelings} />
+        <Route path="/understanding" component={Understanding} />
+        <Route path="/supported" component={Supported} />
+        <Route path="/comments" component={Comments} />
+        <Route path="/submit" component={Submit} />
+        <Route path="/final" component={Final} />
+        <Route path="/thankyou" component={ThankYou} />
+        <Route path="/admin" component={Admin} />
       </div>
     </Router>
     );

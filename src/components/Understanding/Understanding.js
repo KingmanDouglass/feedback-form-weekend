@@ -39,7 +39,7 @@ class Understanding extends Component {
               <form className={classes.container} noValidate autoComplete="off">
               <TextField
                 id="filled-url"
-                label="How You Understanding Stuff Fellas?"
+                label="Y'all Get It Fellas?"
                 style={{backgroundColor: 'white', color: 'yellow'}}
                 className={classes.textField}
                 value={this.state.understanding}
