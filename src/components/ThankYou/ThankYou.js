@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header/Header'
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-class Footer extends Component {
+const styles = theme => ({
+    button: {
+      margin: theme.spacing.unit,
+    },
+    input: {
+      display: 'none',
+    },
+  });
+
+class ThankYou extends Component {
 
 // state = 
 //     {
@@ -20,11 +31,14 @@ nextPage = (event) => {
 }
 
     render() {
+        const { classes } = this.props;
         return (
             <div className="thankyou">
             <Header/>
-              <h1>THANKS BRUH</h1>
-              <button onClick={this.nextPage}>Spam Us With More Feedback</button>
+              <h1>Thanks Fella! Feel Free To Spam Us With More Feedback!</h1>
+              <Button onClick={this.nextPage} variant="contained" color="primary" className={classes.button}>
+                Lego Back
+              </Button>
             </div>
         )
     }
@@ -35,4 +49,4 @@ const mapReduxStateToProps = (reduxState) => ({
   });
   
 
-export default connect(mapReduxStateToProps)(Footer);
+  export default connect(mapReduxStateToProps)(withStyles(styles)(ThankYou));

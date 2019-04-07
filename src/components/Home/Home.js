@@ -39,7 +39,7 @@ nextPage = (event) => {
               <br/>
               <br/>
               <br/>
-              <h2>"We don't make mistakes, just happy little accidents."</h2>
+              <h2 className="homeWords">"We don't make mistakes, just happy little accidents."</h2>
               <br/>
               <br/>
               <br/>
