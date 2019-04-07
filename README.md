@@ -1,10 +1,11 @@
 # Redux Feedback Loop
 
+### MAKE A FEEDBACK LOOP WITH REDUX!!
+
+```
 ### STEP 1: DATABASE
 
 Create a database under the name of "prime_feedback"
-
-```
 
 Add some test data to ensure the POST is reflecting accurate information. Table should include ID, Feeling, Understanding, SUpport, Comments, Flagged & Date.
 
