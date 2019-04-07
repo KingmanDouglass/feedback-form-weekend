@@ -41,10 +41,14 @@
 
 .final {
   background-color: black;
+  height: 800px;
+  text-align: center;
 }
 
 .thankyou {
   background-color: black;
+  height: 800px;
+  text-align: center;
 }
 
 .App-title {
