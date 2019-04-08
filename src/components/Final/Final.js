@@ -25,29 +25,34 @@ class Final extends Component {
 //onClick={this.nextPage}
 
 handleSubmit = () => {
-    let newFeedback = this.props.reduxState;
-    let postFeedback =
-    {
-        "feeling": `${newFeedback.feelingsReducer}`,
-        "understanding": `${newFeedback.understandingReducer}`,
-        "support": `${newFeedback.supportedReducer}`,
-        "comments": `${newFeedback.commentsReducer}`,
-    };
-
-
-    console.log(`handleSu7bmit before post `, postFeedback);
-    
-    axios({
-        method: 'POST',
-        url: '/feedback',
-        data: postFeedback,
-    }).then((response)=>{
-        console.log(`in post `, response);
-        this.props.history.push('/thankyou')  
-    }).catch((error) => {
-        alert(`Uh oh, someone didn't use words and/or numbers the correct way...this is why our failing education system in the country is a serious concern!`);
-      } )
+  this.props.history.push('/thankyou')
+  this.props.handleSubmit();
 }
+
+// handleSubmit = () => {
+//     let newFeedback = this.props.reduxState;
+//     let postFeedback =
+//     {
+//         "feeling": `${newFeedback.feelingsReducer}`,
+//         "understanding": `${newFeedback.understandingReducer}`,
+//         "support": `${newFeedback.supportedReducer}`,
+//         "comments": `${newFeedback.commentsReducer}`,
+//     };
+
+
+//     console.log(`handleSu7bmit before post `, postFeedback);
+    
+//     axios({
+//         method: 'POST',
+//         url: '/feedback',
+//         data: postFeedback,
+//     }).then((response)=>{
+//         console.log(`in post `, response);
+//         this.props.history.push('/thankyou')  
+//     }).catch((error) => {
+//         alert(`Uh oh, someone didn't use words and/or numbers the correct way...this is why our failing education system in the country is a serious concern!`);
+//       } )
+// }
 
 
     render() {
