@@ -3,46 +3,13 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 class Admin extends Component {
-
-
-// getFeedback = () => {
-//     axios({
-//         method: 'GET',
-//         url: '/feedback',
-//     })
-//         .then((response) => {
-//         console.log('feedback data', response.data);
-//         const action = { type: 'DISPLAY_FEEDBACK', payload: response.data };
-//         this.props.dispatch(action);
-//         })
-//         .catch((error) => {
-//         console.log('Error getting feedback data', error);
-//         alert('Sorry, could not get the feedback. Try again later.');
-//         })
-//     }
-
-// deleteFeedback = (event) => {
-//     // event.preventDefault();
-//     let deleteId = event.target.value;
-//     console.log('delete id is ', deleteId);
-//     axios({
-//         method: 'DELETE',
-//         url: `/feedback/${deleteId}`
-//     })
-//         .then((response) => {
-//         this.getFeedback();
-//         })
-//         .catch((error) => {
-//         console.log(`Something bad happened deleting feedback ${deleteId}`);
-//         alert(`Couldn't delete the feedback, try again later`);
-//         })
-//     }
     
+    //what is called upon load
     componentDidMount() {
         console.log('in componentDidMount...')
         this.props.getFeedback();
       }
-
+      // set up table and map through the info gotten from reducer to display
     render() {
         return (
             <table align="center">

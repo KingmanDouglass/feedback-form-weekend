@@ -23,7 +23,7 @@ class ThankYou extends Component {
 //         "comments": '',
 //     }
 
-
+//take us back to the oginal page
 nextPage = (event) => {
     // const action = { type: 'CLEAR_INPUTS', payload: this.state};
     // this.props.dispatch(action);

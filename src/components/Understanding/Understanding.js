@@ -7,13 +7,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
-
+  //set state for understanding
     state =
         {
             understanding: '',
         }
 
-
+        //on the click of the button dispatch UNDERSTANDING payload and tae us to SUPPORTED
     nextPage = (event) => {
         console.log(this.props.product);
         const action = { type: 'ADD_UNDERSTANDING', payload: this.state.understanding};
@@ -21,6 +21,7 @@ class Understanding extends Component {
         this.props.history.push('/supported')
     }
 
+    //reset state
     handleChange = (event) => {
         this.setState({
             understanding: event.target.value

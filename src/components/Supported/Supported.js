@@ -7,12 +7,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 class Supported extends Component {
-
+  //set state
     state =
         {
             supported: '',
         }
 
+        //upon click of button dispatch SUPPORTED payload and take us to COMMENTS page 
     nextPage = (event) => {
         console.log(this.props.product);
         const action = { type: 'ADD_SUPPORTED', payload: this.state.supported};
@@ -20,6 +21,7 @@ class Supported extends Component {
         this.props.history.push('/comments')
     }
 
+      //reset state
     handleChange = (event) => {
         this.setState({
             supported: event.target.value

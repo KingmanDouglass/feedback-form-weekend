@@ -14,8 +14,10 @@ import axios from 'axios';
 
 class App extends Component {
   
+  //POST function
   handleSubmit = () => {
     let newFeedback = this.props.reduxState;
+    //accumulate all reducers into one SUPER REDUCER!!!!!
     let postFeedback =
     {
         "feeling": `${newFeedback.feelingsReducer}`,
@@ -30,6 +32,7 @@ class App extends Component {
     axios({
         method: 'POST',
         url: '/feedback',
+        //send the SUPER REDUCER!!!!!!
         data: postFeedback,
     }).then((response)=>{
         console.log(`in post `, response);
@@ -39,8 +42,10 @@ class App extends Component {
       } )
 }
 
+//DELETE function
 deleteFeedback = (event) => {
   // event.preventDefault();
+  //target based off of the values in the click
   let deleteId = event.target.value;
   console.log('delete id is ', deleteId);
   axios({
@@ -48,6 +53,7 @@ deleteFeedback = (event) => {
       url: `/feedback/${deleteId}`
   })
       .then((response) => {
+        //re-render the page upon delete
       this.getFeedback();
       })
       .catch((error) => {
@@ -56,6 +62,7 @@ deleteFeedback = (event) => {
       })
   }
 
+  //GET function
   getFeedback = () => {
     axios({
         method: 'GET',
@@ -76,7 +83,7 @@ deleteFeedback = (event) => {
   render() {
     return (
   
-      
+      //Hash routers - create paths for each page
       <Router>
         <div>
         <Route exact path="/" component={Home} />

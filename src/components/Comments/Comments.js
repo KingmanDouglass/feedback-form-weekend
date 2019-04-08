@@ -7,12 +7,12 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
-
+  //set state for the comments section
     state =
         {
             comments: '',
         }
-
+        //upon click dispatch the payload and redirect to FINAL page
     nextPage = (event) => {
         console.log(this.props.product);
         const action = { type: 'ADD_COMMENTS', payload: this.state.comments};
@@ -20,6 +20,7 @@ class Comments extends Component {
         this.props.history.push('/final')
     }
 
+    //reset state
     handleChange = (event) => {
         this.setState({
             comments: event.target.value
